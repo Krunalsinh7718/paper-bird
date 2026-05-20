@@ -64,7 +64,7 @@ gltfLoader.load("/models/paper-bird/paper-bird.glb",
     const mesh = getMeshesByName(model, "Paper");
     paperMesh = mesh[0];
     paperMesh.position.y = -1;
-    paperMesh.rotation.y = -Math.PI / 0.5
+    paperMesh.rotation.y  = Math.PI 
     threeAnimationMixer = new THREE.AnimationMixer(paperMesh);
     scene.add(paperMesh);
 
@@ -164,7 +164,7 @@ const scene = new THREE.Scene();
 =            Camera setup            =
 =============================================*/
 const camera = new THREE.PerspectiveCamera(75, parameters.canvasWidth / parameters.canvasHeight, 0.1, 100)
-camera.position.set(-16, 15, -16)
+camera.position.set(-15, 10, 0)
 scene.add(camera)
 
 /*=============================================
@@ -194,7 +194,7 @@ sky.material.uniforms['turbidity'].value = 1.5
 sky.material.uniforms['rayleigh'].value = 0.8
 sky.material.uniforms['mieCoefficient'].value = 0.18
 sky.material.uniforms['mieDirectionalG'].value = 0.5
-sky.material.uniforms['sunPosition'].value.set(1.75, 0, 2)
+sky.material.uniforms['sunPosition'].value.set(1.75, 0, 0)
 sky.scale.setScalar( 10000 );
 scene.add(sky);
 

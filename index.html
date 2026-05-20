@@ -6,6 +6,7 @@
     <title>paper-bird</title>
     <style>
       body { margin: 0; }
+      
       .staps-wrapper{
         position: fixed;
         bottom: 20px;
@@ -53,6 +54,9 @@
         text-transform: uppercase;
         text-shadow: -2px -2px 0 black;
         user-select: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
       }
       .btn-fly{
         font-size: 16px;
@@ -72,7 +76,7 @@
       <button class="btn btn-prev" disabled>&lt;</button>
       <div class="step-text">Step <span class="step">0</span></div>
       <button class="btn btn-next">&gt;</button>
-      <button class="btn btn-fly" disabled>Animate Fly</button>
+      <button class="btn btn-fly" disabled>Fly</button>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>paper-bird</title>
+    <style>
+      body { margin: 0; }
+      .staps-wrapper{
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      .btn{
+        padding: 0 25px;
+        font-size: 40px;
+        font-weight: 400;
+        height: 50px;
+        min-width: 100px;
+        border-radius: 25px;
+        background-color: #0058e3;
+        color: #fff;
+        border: 3px dashed #000000;
+        transition: 150ms;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+      }
+      .btn[disabled]{
+        opacity: 0.5;
+        cursor: not-allowed;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+      }
+      .btn[disabled]:hover,.btn[disabled]:focus{
+        background-color: #0058e3;
+      }
+      .btn:hover, .btn:focus{
+        background-color: #d42ce3;
+      }
+      .step-text{
+        color: #fdff00;
+        width: 88px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: -2px -2px 0 black;
+        user-select: none;
+      }
+      .btn-fly{
+        font-size: 16px;
+      }
+    </style>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div class="staps-wrapper">
+      <button class="btn btn-prev" disabled>&lt;</button>
+      <div class="step-text">Step <span class="step">0</span></div>
+      <button class="btn btn-next">&gt;</button>
+      <button class="btn btn-fly" disabled>Animate Fly</button>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
